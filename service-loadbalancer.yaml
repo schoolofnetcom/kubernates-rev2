@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: expo-loadbalancer
+spec:
+  type: LoadBalancer
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  externalIPs:
+    - 64.227.22.185   
